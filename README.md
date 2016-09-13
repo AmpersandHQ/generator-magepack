@@ -36,7 +36,7 @@ The following commands are available:
 
 ## Install Node.js 6.3.0
 
-*`cd /opt/boxen/node-build`
-*`git pull origin master`
-*`nodenv install 6.3.0`
-*`nodenv global 6.3.0`
+* `cd /opt/boxen/node-build`
+* `git pull origin master`
+* `nodenv install 6.3.0`
+* `nodenv global 6.3.0`
