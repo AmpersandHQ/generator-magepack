@@ -6,7 +6,7 @@ define(["react", "react-dom", "redux.min", "app.min"], function(React, ReactDOM,
     // our render function
     function render() {
         ReactDOM.render(React.createElement(List.default, {
-            reduxStore: store,
+            store: store,
             items: store.getState().items,
         }), mountNode);
     }

@@ -2,11 +2,13 @@ import React from 'react';
 
 var ListItem = React.createClass({
     propTypes: {
-        reduxStore: React.PropTypes.object,
         item: React.PropTypes.object
     },
+    contextTypes: {
+        store: React.PropTypes.object
+    },
     dispatch: function () {
-        this.props.reduxStore.dispatch({
+        this.context.store.dispatch({
             id: this.props.item.id,
             type: 'TOGGLE_ME'
         });
