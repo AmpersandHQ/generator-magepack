@@ -6,7 +6,7 @@ A Yeoman generator for a ReactJS, Redux, node module
 
 Make sure Node.js 6.30 is installed and Yeoman is available for it. See the end of this readme for Node.js 6.3.0 install instructions via nodenv.
 
-1. Git clone (git clone git@github.com:AmpersandHQ/generator-amp-node.git) to you local machine
+1. Git clone this repo (`git clone git@github.com:AmpersandHQ/generator-amp-node.git`) to you local machine
 2. Install yeoman `npm install -g yo`
 3. From inside the generator-amp-node directory run, `npm link`
 4. You're ready to generate a new node module
