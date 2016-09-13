@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Example App</title>
+        <script>
+            var require = {
+                "baseUrl": "example/js/"
+            };
+        </script>
+        <script data-main="App" src="/example/js/require.js"></script>
+        <script type="text/babel" src="/example/js/require-config.js"></script>
+    </head>
+    <body>
+        <div id="reactapp"></div>
+        <script type="text/javascript">
+            var DATA = {
+                items: [{
+                    id: 'item-1',
+                    title: "Item 1",
+                    selected: false
+                },
+                {
+                    id: 'item-2',
+                    title: "Item 2",
+                    selected: false
+                },
+                {
+                    id: 'item-3',
+                    title: "Item 3",
+                    selected: false
+                }]
+            };
+        </script>
+    </body>
+</html>
