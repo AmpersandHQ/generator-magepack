@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux'
 import { ListItem } from './ListItem'
+import { ListItemAsync } from './ListItemAsync'
 
 var List = React.createClass({
     propTypes: {
@@ -12,9 +13,15 @@ var List = React.createClass({
             <Provider store={this.props.store}>
                 <ul>
                     {this.props.items.map(function (item) {
-                        return (
-                            <ListItem key={item.id} item={item} />
-                        )
+                        if (item.type === 'async') {
+                            return (
+                                <ListItemAsync key={item.id} item={item} />
+                            )
+                        } else {
+                            return (
+                                <ListItem key={item.id} item={item} />
+                            )
+                        }
                     })}
                 </ul>
             </Provider>
