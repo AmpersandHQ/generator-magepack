@@ -4,7 +4,7 @@ require.config({
     },
     shim:{
         'HelloWorld': {
-            'deps':['react', 'react-dom', 'redux.min']
+            'deps':['react', 'react-dom', 'redux', 'react-redux', 'redux-thunk', 'react-router']
         }
     }
 });

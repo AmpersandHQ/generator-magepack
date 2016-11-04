@@ -8,6 +8,39 @@
         </script>
         <script data-main="App" src="/example/js/require.js"></script>
         <script type="text/babel" src="/example/js/require-config.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <style>
+            html, body {
+                font-family: 'Lato', sans-serif;
+                color: #1F333E;
+            }
+            body {
+                margin: 0 auto;
+                padding-top: 80px;
+                width: 980px;
+                background-color: #1F333E;
+            }
+            ul {
+                margin: 0 auto;
+                padding: 0;
+                list-style: none;
+                width: 50%;
+            }
+            li {
+                margin-bottom: 20px;
+                cursor: pointer;
+                background-color: #7FBBC8;
+            }
+            p {
+                margin: 0;
+                padding: 16px;
+                padding-left: 20px;
+            }
+            span {
+                float: right;
+                color: #FFFFFF;
+            }
+        </style>
     </head>
     <body>
         <div id="reactapp"></div>
@@ -16,17 +49,38 @@
                 items: [{
                     id: 'item-1',
                     title: "Item 1",
-                    selected: false
+                    selected: false,
+                    type: 'default'
                 },
                 {
                     id: 'item-2',
                     title: "Item 2",
-                    selected: false
+                    selected: false,
+                    type: 'default'
                 },
                 {
                     id: 'item-3',
                     title: "Item 3",
-                    selected: false
+                    selected: false,
+                    type: 'default'
+                },
+                {
+                    id: 'item-4',
+                    title: "Item 4 - Async",
+                    selected: false,
+                    type: 'async'
+                },
+                {
+                    id: 'item-5',
+                    title: "Item 5 - Async",
+                    selected: false,
+                    type: 'async'
+                },
+                {
+                    id: 'item-6',
+                    title: "Item 6 - Async",
+                    selected: false,
+                    type: 'async'
                 }]
             };
         </script>
