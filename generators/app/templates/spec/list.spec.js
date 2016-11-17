@@ -1,6 +1,8 @@
 /*global describe it expect */
-var Redux = require('redux');
-var list = require('../dist/app.min').list;
+
+import * as Redux from "redux/lib/index";
+import { reducers } from '../app/reducers/reducers';
+
 
 var DATA = {
     items: [{
@@ -20,13 +22,13 @@ var DATA = {
     }]
 };
 
-var store = Redux.createStore(list, DATA);
+var store = Redux.createStore(reducers, DATA);
 
 describe('HelloWorld App ::', function() {
 
     describe('the list reducer', function() {
         it('should NOT have a selected item', function() {
-            expect(store.getState().items[0].selected).toNotBe(true);
+            expect(store.getState().items[0].selected).not.toBe(true);
         });
 
         it('should be able to select an item', function() {
