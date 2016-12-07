@@ -24,19 +24,17 @@ var DATA = {
 
 var store = Redux.createStore(reducers, DATA);
 
-describe('HelloWorld App ::', function() {
 
-    describe('the list reducer', function() {
-        it('should NOT have a selected item', function() {
-            expect(store.getState().items[0].selected).not.toBe(true);
-        });
+describe('the list reducer', function() {
+    it('should NOT have a selected item', function() {
+        expect(store.getState().items[0].selected).not.toBe(true);
+    });
 
-        it('should be able to select an item', function() {
-            store.dispatch({
-                id: 'item-1',
-                type: 'TOGGLE_ME'
-            });
-            expect(store.getState().items[0].selected).toBe(true);
+    it('should be able to select an item', function() {
+        store.dispatch({
+            id: 'item-1',
+            type: 'TOGGLE_ME'
         });
+        expect(store.getState().items[0].selected).toBe(true);
     });
 });
