@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "dist/app.min.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine",
+    "test": "jest",
     "dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.dev.config.js",
     "build": "webpack --config ./webpack.prod.config.js",
     "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache --ignore-pattern example --ignore-pattern dist; exit 0;"
@@ -23,7 +23,7 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.1.2",
     "html-webpack-plugin": "^2.15.0",
-    "jasmine-es6": "^0.4.0",
+    "jest": "^17.0.3",
     "npm-install-webpack-plugin": "^4.0.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
