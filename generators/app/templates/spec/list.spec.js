@@ -1,10 +1,10 @@
 /*global describe it expect */
 
 import * as Redux from "redux/lib/index";
-import { reducers } from '../app/reducers/reducers';
+import { list } from '../app/reducers/list';
 
 
-const list = {
+const listData = {
     items: [{
         id: 'item-1',
         title: 'Item 1',
@@ -22,7 +22,7 @@ const list = {
     }]
 };
 
-const store = Redux.createStore(reducers, list);
+const store = Redux.createStore(list, listData);
 
 
 describe('the list reducer', () => {
