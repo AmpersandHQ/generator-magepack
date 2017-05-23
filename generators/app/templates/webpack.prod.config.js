@@ -8,7 +8,9 @@ config.plugins = [
     new Webpack.optimize.UglifyJsPlugin({
         sourceMap: true,
         mangle: false,
-        warnings: false
+        compress: {
+        	warnings: false
+        }
     })
 ];
 

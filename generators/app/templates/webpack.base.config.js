@@ -15,15 +15,19 @@ module.exports = {
         filename : 'app.min.js',
         publicPath: '/example/js/'
     },
+    resolve: {
+        modules: [
+            path.join(__dirname + '/node_modules/')
+        ]
+    },
     module: {
-        preLoaders: [
+        rules: [
             {
                 test: /\.js?$/,
                 loaders: ['eslint'],
-                include: './app/**/*'
-            }
-        ],
-        loaders: [
+                enforce: "pre",
+                include: path.join(__dirname + '/app/**/*')
+            },
             {
                 test: /\.js?$/,
                 loaders: ['babel-loader'],
