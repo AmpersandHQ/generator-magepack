@@ -25,6 +25,8 @@
         // else is used
         "quotes": [2, "single"],
         // Enforce parens around single params in arrow functions
-        "arrow-parens": [2, "always"]
+        "arrow-parens": [2, "always"],
+        // ignore switch cases that don't end with return, throw or break 
+        "no-fallthrough": 0
     }
 }

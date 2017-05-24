@@ -1,6 +1,6 @@
 /*global describe it expect */
 
-import * as Redux from "redux/lib/index";
+import * as Redux from 'redux/lib/index';
 import { list } from '../app/reducers/list';
 
 
