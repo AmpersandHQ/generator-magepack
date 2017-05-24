@@ -29,7 +29,7 @@ See the `example/js/` directory for detail on how this application is put togeth
 The following commands are available:
 
 * `npm run dev` to start a webpack dev server on http://localhost:8080/webpack-dev-server/ this includes hot reloading of ReactJS components :D
-* `npm run test` to run any jasmine spec files in `test/` (this command will also run a full build)
+* `npm run test` to run any jest spec files in `test/` (this command will also run a full build)
 * `npm run lint` to run eslint against your files
 * `npm run build` to run the production webpack build of your module
 

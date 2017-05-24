@@ -5,9 +5,11 @@
   "main": "dist/app.min.js",
   "scripts": {
     "test": "jest",
-    "dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.dev.config.js",
-    "build": "webpack --config ./webpack.prod.config.js",
-    "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache --ignore-pattern example --ignore-pattern dist; exit 0;"
+    "dev": "npm run silent-dev --silent || true",
+    "silent-dev": "npm run lint && webpack-dashboard -- webpack-dev-server --config ./webpack.dev.config.js",
+    "build": "npm run silent-build --silent || true",
+    "silent-build": "npm run lint && webpack --hide-modules true --progress true --config ./webpack.prod.config.js",
+    "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache --ignore-pattern example --ignore-pattern dist"
   },
   "private": true,
   "author": "<%- author %>",
@@ -23,8 +25,11 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.1.2",
     "html-webpack-plugin": "^2.15.0",
-    "jest": "^17.0.3",
+    "husky": "^0.13.3",
+    "jest": "^20.0.0",
+    "lint-staged": "^3.4.2",
     "npm-install-webpack-plugin": "^4.0.0",
+    "prettier": "^1.3.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-hot-loader": "^3.0.0-beta.3",

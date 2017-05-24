@@ -9,7 +9,7 @@ config.plugins = [
         sourceMap: true,
         mangle: false,
         compress: {
-        	warnings: false
+            warnings: false
         }
     })
 ];

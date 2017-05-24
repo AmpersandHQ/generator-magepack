@@ -1,8 +1,5 @@
-import qs from 'qs'
-
-export const RECEIVE_LOCATIONS = 'RECEIVE_LOCATIONS';
-export const REQUESTING        = 'REQUESTING';
-export const RECEIVED          = 'RECEIVED';
+export const REQUESTING = 'REQUESTING';
+export const RECEIVED   = 'RECEIVED';
 
 export function startAsync(data) {
 
@@ -25,7 +22,7 @@ export function finishAsync(response) {
     return function (dispatch) {
 
         dispatch({
-            type: 'RECEIVED',
+            type: RECEIVED,
             id: response.id
         });
 

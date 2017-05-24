@@ -24,8 +24,8 @@ module.exports = {
         rules: [
             {
                 test: /\.js?$/,
-                loaders: ['eslint'],
-                enforce: "pre",
+                loaders: ['eslint-loader'],
+                enforce: 'pre',
                 include: path.join(__dirname + '/app/**/*')
             },
             {

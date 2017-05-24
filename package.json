@@ -1,6 +1,6 @@
 {
-  "name": "generator-amp-node",
-  "version": "0.1.0",
+  "name": "@therhodders/generator-amp-node",
+  "version": "0.2.0",
   "description": "A yeoman generator for creating a node module for Magento 2",
   "files": [
     "generators/app"

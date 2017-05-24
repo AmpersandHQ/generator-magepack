@@ -17,6 +17,7 @@ config.devServer = {
     hot: true,
     quiet: true, // lets WebpackDashboard do its thing
     historyApiFallback: true,
+    //contentBase: path.join(__dirname, "example"),
 }
 
 module.exports = config;
