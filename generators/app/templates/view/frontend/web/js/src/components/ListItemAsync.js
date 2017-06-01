@@ -1,22 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { startAsync } from '../actions/index';
 
-var ListItemAsync = React.createClass({
-    propTypes: {
-        item: React.PropTypes.object
-    },
-    contextTypes: {
-        store: React.PropTypes.object
-    },
-    dispatch: function() {
+class ListItemAsync extends React.Component {
+    dispatch() {
         this.context.store.dispatch(
             startAsync({
                 id: this.props.item.id,
                 type: 'ASYNC_ME'
             })
         );
-    },
-    render: function() {
+    }
+
+    render() {
         return (
             <li>
                 <p
@@ -25,7 +21,7 @@ var ListItemAsync = React.createClass({
                             ? '#E25F35'
                             : 'transparent'
                     }}
-                    onClick={this.dispatch}
+                    onClick={() => this.dispatch()}
                 >
                     {this.props.item.title}
                     <span>{this.props.item.requesting ? 'LOADING' : ''}</span>
@@ -33,6 +29,14 @@ var ListItemAsync = React.createClass({
             </li>
         );
     }
-});
+}
+
+ListItemAsync.propTypes = {
+    item: PropTypes.object
+};
+
+ListItemAsync.contextTypes = {
+    store: PropTypes.object
+};
 
 export { ListItemAsync };

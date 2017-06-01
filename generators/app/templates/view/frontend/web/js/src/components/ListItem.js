@@ -1,19 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-var ListItem = React.createClass({
-    propTypes: {
-        item: React.PropTypes.object
-    },
-    contextTypes: {
-        store: React.PropTypes.object
-    },
-    dispatch: function() {
+class ListItem extends React.Component {
+    dispatch() {
         this.context.store.dispatch({
             id: this.props.item.id,
-            type: 'TOGGLE_ME'
+            type: 'SELECT_ITEM'
         });
-    },
-    render: function() {
+    }
+
+    render() {
         return (
             <li>
                 <p
@@ -22,13 +18,21 @@ var ListItem = React.createClass({
                             ? '#E25F35'
                             : 'transparent'
                     }}
-                    onClick={this.dispatch}
+                    onClick={() => this.dispatch()}
                 >
                     {this.props.item.title}
                 </p>
             </li>
         );
     }
-});
+}
+
+ListItem.propTypes = {
+    item: PropTypes.object
+};
+
+ListItem.contextTypes = {
+    store: PropTypes.object
+};
 
 export { ListItem };

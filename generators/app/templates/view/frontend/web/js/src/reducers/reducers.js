@@ -1,13 +1,13 @@
-import { toggle } from './toggle';
+import { select } from './select';
 import { requesting } from './requesting';
 import { recieved } from './recieved';
 
-export function list(state = [], action) {
+export function reducers(state = [], action) {
     switch (action.type) {
-        case 'TOGGLE_ME':
+        case 'SELECT_ITEM':
             return Object.assign({}, state, {
                 items: state.items.map(function(item) {
-                    return toggle(item, action);
+                    return select(item, action);
                 })
             });
         case 'REQUESTING':

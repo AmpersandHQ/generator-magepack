@@ -1,7 +1,7 @@
 /*global describe it expect */
 
 import * as Redux from 'redux/lib/index';
-import { list } from '../app/reducers/list';
+import { reducers } from '../src/reducers/reducers';
 
 
 const listData = {
@@ -22,7 +22,7 @@ const listData = {
     }]
 };
 
-const store = Redux.createStore(list, listData);
+const store = Redux.createStore(reducers, listData);
 
 
 describe('the list reducer', () => {
@@ -36,7 +36,7 @@ describe('the list reducer', () => {
 
         store.dispatch({
             id: 'item-1',
-            type: 'TOGGLE_ME'
+            type: 'SELECT_ITEM'
         });
 
         expect(store.getState().items[0].selected).toBe(true);

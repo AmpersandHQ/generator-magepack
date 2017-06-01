@@ -1,6 +1,6 @@
-export function toggle(state = [], action) {
+export function select(state = [], action) {
     switch (action.type) {
-        case 'TOGGLE_ME':
+        case 'SELECT_ITEM':
             if (state.id === action.id) {
                 return Object.assign({}, state, { selected: true });
             } else {

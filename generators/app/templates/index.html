@@ -3,12 +3,13 @@
         <title>Example App</title>
         <script>
             var require = {
-                "baseUrl": "example/js/"
+                "baseUrl": "view/frontend/web/js/"
             };
         </script>
-        <script data-main="App" src="/example/js/require.js"></script>
-        <script type="text/babel" src="/example/js/require-config.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script data-main="App" src="https://unpkg.com/requirejs/require.js"></script>
+        <script src="view/frontend/requirejs-config.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+        <link href="https://ampersandhq.github.io/ampCSS/main.css" rel="stylesheet" />
         <style>
             html, body {
                 font-family: 'Lato', sans-serif;
@@ -17,7 +18,6 @@
             body {
                 margin: 0 auto;
                 padding-top: 80px;
-                width: 980px;
                 background-color: #1F333E;
             }
             ul {
@@ -43,7 +43,12 @@
         </style>
     </head>
     <body>
-        <div id="reactapp"></div>
+        <div class="o-layout">
+            <div class="o-layout__item u-12/12">
+                <div id="reactapp"></div>
+            </div>
+        </div>
+        
         <script type="text/javascript">
             var DATA = {
                 items: [{

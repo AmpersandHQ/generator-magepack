@@ -13,11 +13,10 @@ config.plugins = [
 ];
 
 config.devServer = {
-    publicPath: '/example/js',
+    publicPath: '/view/frontend/web/js/example/',
     hot: true,
     quiet: true, // lets WebpackDashboard do its thing
-    historyApiFallback: true,
-    //contentBase: path.join(__dirname, "example"),
+    historyApiFallback: true
 }
 
 module.exports = config;
