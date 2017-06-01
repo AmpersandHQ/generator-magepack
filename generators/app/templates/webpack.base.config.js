@@ -13,7 +13,7 @@ module.exports = {
         path: PATHS.build,
         libraryTarget: 'umd',
         filename : 'app.min.js',
-        publicPath: '/view/frontend/web/js/example/'
+        publicPath: '/view/frontend/web/js/'
     },
     resolve: {
         modules: [

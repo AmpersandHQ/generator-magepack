@@ -1,5 +1,5 @@
 define(
-    ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'dist/app.min'], 
+    ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'app.min'], 
     function(React, ReactDOM, PropTypes, Redux, ReactRedux, ReduxThunk, ReactApp) {
 
         var mountNode = document.querySelector('#reactapp');

@@ -10,7 +10,7 @@
     "silent-dev": "npm run lint && webpack-dashboard -- webpack-dev-server --config ./webpack.dev.config.js",
     "build": "npm run silent-build --silent || true",
     "silent-build": "npm run lint && webpack --hide-modules true --progress true --config ./webpack.prod.config.js",
-    "lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --cache --ignore-pattern example --ignore-pattern dist"
+    "lint": "eslint . --ext .js --ext .jsx --ignore-pattern .gitignore --cache --ignore-pattern example --ignore-pattern dist"
   },
   "lint-staged": {
     "app/**/*.js": [
@@ -19,16 +19,20 @@
     ]
   },
   "babel": {
-    "presets": ["es2015", "react"],
+    "presets": [
+      ["es2015", {"modules": false}],
+      "react"
+    ],
     "env": {
       "development": {
-        "presets": ["react-hmre"]
+        "plugins": ["react-hot-loader/babel"]
       }
     }
-  }, 
+  },
   "eslintConfig": {
     "extends": [
-      "eslint:recommended", "plugin:react/recommended"
+      "eslint:recommended",
+      "plugin:react/recommended"
     ],
     "parser": "babel-eslint",
     "env": {
@@ -42,8 +46,14 @@
     "rules": {
       "no-console": 0,
       "no-underscore-dangle": 1,
-      "quotes": [2, "single"],
-      "arrow-parens": [2, "always"],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "arrow-parens": [
+        2,
+        "always"
+      ],
       "no-fallthrough": 0
     }
   },
@@ -51,12 +61,11 @@
   "author": "<%- author %>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "babel-core": "^6.11.4",
+    "babel-core": "^6.24.1",
     "babel-eslint": "latest",
-    "babel-loader": "latest",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-react-hmre": "^1.1.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^3.3.1",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "latest",
@@ -66,17 +75,17 @@
     "lint-staged": "^3.4.2",
     "npm-install-webpack-plugin": "^4.0.0",
     "prettier": "^1.3.1",
+    "prop-types": "15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-hot-loader": "latest",
-    "redux": "^3.5.2",
-    "webpack": "^2.5.1",
-    "webpack-dashboard": "latest",
-    "webpack-dev-server": "latest",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-redux": "latest",
     "react-router-component": "latest",
-    "prop-types": "15.5.10",
+    "redux": "^3.5.2",
     "redux-thunk": "latest",
-    "react-redux": "latest"
+    "webpack": "^2.6.1",
+    "webpack-dashboard": "latest",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "es6-promise": "latest",

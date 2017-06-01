@@ -1,6 +1,6 @@
 require.config({
     paths:{
-        'ReactApp': 'dist/app.min',
+        'ReactApp': 'app.min',
         'react': '//unpkg.com/react/dist/react',
         'react-dom': '//unpkg.com/react-dom/dist/react-dom',
         'prop-types': '//unpkg.com/prop-types/prop-types',

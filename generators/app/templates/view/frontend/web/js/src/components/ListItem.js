@@ -15,7 +15,7 @@ class ListItem extends React.Component {
                 <p
                     style={{
                         backgroundColor: this.props.item.selected
-                            ? '#E25F35'
+                            ? 'red'
                             : 'transparent'
                     }}
                     onClick={() => this.dispatch()}
