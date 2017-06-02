@@ -9,7 +9,7 @@
     "dev": "npm run silent-dev --silent || true",
     "silent-dev": "npm run lint && webpack-dashboard -- webpack-dev-server --config ./webpack.dev.config.js",
     "build": "npm run silent-build --silent || true",
-    "silent-build": "npm run lint && webpack --hide-modules true --progress true --config ./webpack.prod.config.js",
+    "silent-build": "npm run lint && webpack --hide-modules true --progress true --config ./webpack.config.js",
     "lint": "eslint . --ext .js --ext .jsx --ignore-pattern .gitignore --cache --ignore-pattern example --ignore-pattern dist"
   },
   "lint-staged": {
