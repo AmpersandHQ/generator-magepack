@@ -20,12 +20,27 @@
   },
   "babel": {
     "presets": [
-      ["es2015", {"modules": false}],
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ],
       "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-es2015-destructuring",
+      "transform-class-properties"
     ],
     "env": {
       "development": {
-        "plugins": ["react-hot-loader/babel"]
+        "plugins": [
+          "react-hot-loader/babel",
+          "transform-object-rest-spread",
+          "transform-es2015-destructuring",
+          "transform-class-properties"
+        ]
       }
     }
   },
@@ -64,6 +79,8 @@
     "babel-core": "^6.24.1",
     "babel-eslint": "latest",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^3.3.1",
