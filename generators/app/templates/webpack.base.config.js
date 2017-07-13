@@ -15,11 +15,6 @@ module.exports = {
         filename : 'app.min.js',
         publicPath: '/view/frontend/web/js/'
     },
-    resolve: {
-        modules: [
-            path.join(__dirname + '/node_modules/')
-        ]
-    },
     module: {
         rules: [
             {
