@@ -1,7 +1,7 @@
 var path = require('path');
 
 const PATHS = {
-    app: path.join(__dirname, './view/frontend/web/js/src/index.js'),
+    app: path.join(__dirname, './view/frontend/web/js/src/index.entry.js'),
     build: path.join(__dirname, './view/frontend/web/js/dist')
 };
 
