@@ -1,13 +1,7 @@
-require.config({
+/* eslint-disable no-unused-vars */
+var config = {
     paths:{
-        'ReactApp': 'app.min',
-        'react': '//unpkg.com/react/dist/react',
-        'react-dom': '//unpkg.com/react-dom/dist/react-dom',
-        'prop-types': '//unpkg.com/prop-types/prop-types',
-        'redux': '//unpkg.com/redux/dist/redux',
-        'react-redux': '//unpkg.com/react-redux/dist/react-redux',
-        'redux-thunk': '//unpkg.com/redux-thunk/dist/redux-thunk',
-        'react-router': '//unpkg.com/react-router/dist/react-router'
+        'ReactApp': 'dist/app.min'
     },
     shim:{
         'ReactApp': {
@@ -22,4 +16,4 @@ require.config({
             ]
         }
     }
-});
+};

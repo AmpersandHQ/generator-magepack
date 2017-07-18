@@ -6,8 +6,22 @@
                 "baseUrl": "view/frontend/web/js/"
             };
         </script>
-        <script data-main="App" src="https://unpkg.com/requirejs/require.js"></script>
+        <script data-main="App" src="https://unpkg.co/requirejs@2.3.3/require.js"></script>
         <script src="view/frontend/requirejs-config.js"></script>
+        <script>
+            (function (require) {
+                Object.assign(config.paths, {
+                    'react': '//unpkg.com/react/dist/react',
+                    'react-dom': '//unpkg.com/react-dom/dist/react-dom',
+                    'prop-types': '//unpkg.com/prop-types/prop-types',
+                    'redux': '//unpkg.com/redux/dist/redux',
+                    'react-redux': '//unpkg.com/react-redux/dist/react-redux',
+                    'redux-thunk': '//unpkg.com/redux-thunk/dist/redux-thunk',
+                    'react-router': '//unpkg.com/react-router/dist/react-router'
+                });
+                require.config(config);
+            })(require);
+        </script>
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
         <link href="https://ampersandhq.github.io/ampCSS/main.css" rel="stylesheet" />
         <style>
