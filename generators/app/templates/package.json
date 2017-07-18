@@ -1,5 +1,5 @@
 {
-  "name": "<%= module %>",
+  "name": "@ampersandhq/<%= module %>",
   "version": "0.1.0",
   "description": "<%= description %>",
   "main": "view/frontend/web/js/dist/app.min.js",
@@ -13,7 +13,11 @@
     "lint": "eslint . --ext .js --ext .jsx --ignore-pattern .gitignore --cache --ignore-pattern example --ignore-pattern dist"
   },
   "lint-staged": {
-    "app/**/*.js": [
+    "view/frontend/web/js/src/**/*.js": [
+      "prettier --write --tab-width 4 --single-quote true",
+      "git add"
+    ],
+    "view/frontend/web/js/spec/**/*.js": [
       "prettier --write --tab-width 4 --single-quote true",
       "git add"
     ]
@@ -61,18 +65,18 @@
     "rules": {
       "no-console": 0,
       "no-underscore-dangle": 1,
+      "react/prop-types": 0,
       "quotes": [
         2,
         "single"
       ],
       "arrow-parens": [
         2,
-        "always"
+        "as-needed"
       ],
       "no-fallthrough": 0
     }
   },
-  "private": true,
   "author": "<%- author %>",
   "license": "UNLICENSED",
   "devDependencies": {
