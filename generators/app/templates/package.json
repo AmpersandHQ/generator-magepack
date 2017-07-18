@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "<%= description %>",
   "main": "view/frontend/web/js/dist/app.min.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest",
