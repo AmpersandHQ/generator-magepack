@@ -2,43 +2,80 @@
 
 A Yeoman generator for a Magento-ready, ReactJS/Redux, node module
 
-## How to install
+## Install
 
-Make sure Node.js 6.30 is installed and Yeoman is available for it. See the end of this readme for Node.js 6.3.0 install instructions via nodenv.
+1. Install yeoman `npm install -g yo`
+2. Install magepack `npm install -g generator-magepack`
+3. Done!
 
-1. Git clone this repo (`git clone git@github.com:AmpersandHQ/generator-magepack.git`) to you local machine
-2. Install yeoman `npm install -g yo`
-3. From inside the generator-magepack directory run, `npm link`
-4. You're ready to generate a new node module
-
-## How to use
+## Get started
 
 1. Go to your target directory
 2. Run `yo magepack`
 3. Follow the prompts
 4. Once yeoman has finsihed, run `npm i`
 
-## Start dev
+### Start dev
+
+Run the dev server `npm run dev`.
 
 A sample application is included as a starting point. Making use of ReactJS and Redux, the main application files can be found in `view/frontend/web/js/src`.
 
-The `view/frontend/web/js/src/index.js` file pulls together you application for bundling. The `view/frontend/web/js/dist/` contains the final application distributable.
+The `view/frontend/web/js/src/index.entry.js` file pulls together you application for bundling. The `view/frontend/web/js/dist/` contains the final application distributable.
 
 The structure of the generated files follows the structure of a Magento 2 JavaScript application. You can use this generator directly in `app/code`, `app/design` or `vendor/ampersand/module`. 
 
-**You will need to update the requirejs-config.js at the very least before being 100% Magento-ready.**
+**You will need to update the `view/frontend/web/js/App.js` at the very least before being 100% Magento-ready:**
 
-The following commands are available:
+```diff
+define(
+-   ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'app.min'], 
++   ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'Vendor_Module/js/dist/app.min'], 
+    function(React, ReactDOM, PropTypes, Redux, ReactRedux, ReduxThunk, ReactApp) {
+```
 
-* `npm run dev` to start a webpack dev server on http://localhost:8080/webpack-dev-server/ ~this includes hot reloading of ReactJS components :D~ Hot reloading currently unavailable, your browser will do a full refresh on any changes.
-* `npm test` to run any jest spec files in `view/frontend/web/js/spec/` (this command will also run a full build)
-* `npm run lint` to run eslint against your files
+### Commands
+
+* `npm run dev` to start a webpack dev server on http://localhost:8080/webpack-dev-server/
+* `npm test` to run any Jest spec files in `view/frontend/web/js/spec/` (this command will also run a full build)
+* `npm run lint` to run ESLint against your files
 * `npm run build` to run the production webpack build of your module
 
 
-## Install Node.js 6.3.0
+## Other
 
-* `cd /opt/boxen/node-build`
-* `git pull origin master`
-* `nodenv install 6.3.0`
-* `nodenv global 6.3.0`
+### Linting
+ 
+ESLint is used for linting. http://eslint.org/
+
+Rules can be found under the `eslintConfig` key in `package.json`.
+
+ESLint will be run automatically on every `npm run build` and `npm run dev`.
+
+
+### Prettier
+
+Prettier is an opinionated code formatter. https://prettier.io/playground/
+
+This will be run either by your editor (requires setup) or as a precommit hook. This will re-format your files that are marked as "staged" via `git add` before you commit.
+
+
+### Tests
+
+#### Unit
+
+Jest is used for unit testing. https://facebook.github.io/jest/
+
+Test files should be added to: `view/frontend/web/js/spec/` in the format `filename.spec.js`
+
+Unit tests can be run via `npm test`.
+
+#### Snapshot
+
+Snapshot testing is available, see documentation here: http://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest
+
+You should commit snapshots to version control.
+
+
+
+
