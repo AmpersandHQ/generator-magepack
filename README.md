@@ -1,6 +1,6 @@
 # MAGEPACK
 
-A Yeoman generator for a Magento-ready, ReactJS/Redux, node module
+A Yeoman generator for a Magento 2 ready, ReactJS/Redux application
 
 ## Install
 
@@ -21,7 +21,7 @@ Run the dev server `npm run dev`.
 
 A sample application is included as a starting point. Making use of ReactJS and Redux, the main application files can be found in `view/frontend/web/js/src`.
 
-The `view/frontend/web/js/src/index.entry.js` file pulls together you application for bundling. The `view/frontend/web/js/dist/` contains the final application distributable.
+The `view/frontend/web/js/src/index.entry.js` file pulls together your application for bundling. The `view/frontend/web/js/dist/` contains the final application distributable.
 
 The structure of the generated files follows the structure of a Magento 2 JavaScript application. You can use this generator directly in `app/code`, `app/design` or `vendor/ampersand/module`. 
 
