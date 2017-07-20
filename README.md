@@ -1,5 +1,7 @@
 # MAGEPACK
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AmpersandHQ/generator-magepack.svg)](https://greenkeeper.io/)
+
 A Yeoman generator for a Magento 2 ready, ReactJS/Redux application
 
 ## Install
