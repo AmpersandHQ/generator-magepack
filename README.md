@@ -77,5 +77,14 @@ Snapshot testing is available, see documentation here: http://facebook.github.io
 You should commit snapshots to version control.
 
 
+#### Troubleshooting
+
+If you run into any issues due to existing installations, try running the following commands & then starting again.
+
+```
+cd ~/opt/nodes/6.3.0/lib/node_modules
+rm -rf yo
+rm -rf generator-magepack
+```
 
 
