@@ -6,13 +6,13 @@
                 "baseUrl": "view/frontend/web/js/"
             };
         </script>
-        <script data-main="App" src="https://unpkg.co/requirejs@2.3.3/require.js"></script>
+        <script data-main="App" src="https://unpkg.com/requirejs@2.3.3/require.js"></script>
         <script src="view/frontend/requirejs-config.js"></script>
         <script>
             (function (require) {
                 Object.assign(config.paths, {
-                    'react': '//unpkg.com/react/dist/react',
-                    'react-dom': '//unpkg.com/react-dom/dist/react-dom',
+                    'react': '//unpkg.com/react@16.0.0/umd/react.production.min',
+                    'react-dom': '//unpkg.com/react-dom@16.0.0/umd/react-dom.production.min',
                     'prop-types': '//unpkg.com/prop-types/prop-types',
                     'redux': '//unpkg.com/redux/dist/redux',
                     'react-redux': '//unpkg.com/react-redux/dist/react-redux',
