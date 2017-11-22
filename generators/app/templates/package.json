@@ -89,6 +89,6 @@
   "author": "<%- author %>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@ampersandhq/magepack-sdk": "^2.0.0"
+    "@ampersandhq/magepack-sdk": "^3.0.0"
   }
 }
