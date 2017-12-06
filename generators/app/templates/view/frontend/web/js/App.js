@@ -4,13 +4,13 @@ define(
 
         var mountNode = document.querySelector('#reactapp');
 
+        var composeEnhancers =
+            window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || Redux.compose;
+
         var store = Redux.createStore(
             ReactApp.reducers,
-            window.DATA, 
-            Redux.compose(
-                Redux.applyMiddleware(ReduxThunk.default),
-                window.devToolsExtension && window.devToolsExtension()
-            )
+            window.DATA,
+            composeEnhancers(Redux.applyMiddleware(ReduxThunk.default))
         );
 
         function render() {
