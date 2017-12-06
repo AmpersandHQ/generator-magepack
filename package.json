@@ -1,6 +1,6 @@
 {
   "name": "generator-magepack",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A yeoman generator for creating a react/redux based webpack enabled module for Magento 2",
   "repository": {
     "type": "git",
