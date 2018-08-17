@@ -1,10 +1,11 @@
 define(
-    ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'app.min'], 
+    ['react', 'react-dom', 'prop-types', 'redux', 'react-redux', 'redux-thunk', 'app.min'],
     function(React, ReactDOM, PropTypes, Redux, ReactRedux, ReduxThunk, ReactApp) {
 
         var mountNode = document.querySelector('#reactapp');
 
         var composeEnhancers =
+            // eslint-disable-next-line no-underscore-dangle
             window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || Redux.compose;
 
         var store = Redux.createStore(
