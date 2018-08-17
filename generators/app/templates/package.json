@@ -89,6 +89,7 @@
   "author": "<%- author %>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@ampersandhq/magepack-sdk": "^3.0.0"
+    "@ampersandhq/magepack-sdk": "^3.0.0",
+    "enzyme": "^3.4.3"
   }
 }
