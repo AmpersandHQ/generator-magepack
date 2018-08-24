@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 import { ListItem } from './ListItem';
 import { ListItemAsync } from './ListItemAsync';
 
-class Driver extends React.Component {
-    render() {
-        return (
-            <ul>
-                {this.props.items.map(function(item) {
-                    if (item.type === 'async') {
-                        return <ListItemAsync key={item.id} item={item} />;
-                    } else {
-                        return <ListItem key={item.id} item={item} />;
-                    }
-                })}
-            </ul>
-        );
-    }
+const Driver = ({ items, actions }) => {
+    return (
+        <ul>
+            {items.map(function(item) {
+                if (item.type === 'async') {
+                    return <ListItemAsync key={item.id} item={item} startAsync={actions.startAsync} />;
+                } else {
+                    return <ListItem key={item.id} item={item} selectItem={actions.selectItem} />;
+                }
+            })}
+        </ul>
+    );
 }
 
 Driver.propTypes = {

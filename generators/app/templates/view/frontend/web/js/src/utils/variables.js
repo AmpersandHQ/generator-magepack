@@ -1,0 +1,6 @@
+export const Types = {
+    SELECT_ITEM: 'SELECT_ITEM',
+    REQUESTING: 'REQUESTING',
+    RECEIVED: 'RECEIVED',
+    ASYNC_ME: 'ASYNC_ME',
+}
