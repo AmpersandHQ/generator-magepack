@@ -16,7 +16,7 @@ function(
     ReduxThunk,
     ReactApp
 ) {
-    var mountNode = document.querySelector('.js-finance-calculator');
+    var mountNode = document.querySelector('#reactapp');
 
     function render() {
         ReactDOM.render(
