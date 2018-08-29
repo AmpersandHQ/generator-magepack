@@ -1,9 +1,23 @@
-// components
-import { Root } from './components/Root';
-import { Driver } from './components/Driver';
-// reducers
-import { reducers } from './reducers/reducers';
+import React, { Component }  from 'react';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import AppContainer from './containers/AppContainer';
 
-// exports
-export { Root, Driver, reducers }
-export default Root
+const store = configureStore();
+
+class Root extends Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <AppContainer />
+            </Provider>
+        );
+    }
+}
+
+Root.propTypes = {
+    items: PropTypes.array
+};
+
+export default Root;
