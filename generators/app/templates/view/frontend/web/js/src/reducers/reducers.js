@@ -1,3 +1,13 @@
+/**
+ *
+ * Reducer
+ *
+ * Specific reducer/state updating functionality for our app.
+ * This is to update the state ONLY; all logic belongs with the Actions.
+ *
+ * @copyright (c) Ampersand Commerce 2018
+ */
+
 import { select } from './select';
 import { requesting } from './requesting';
 import { recieved } from './recieved';

@@ -1,6 +1,13 @@
+/**
+ * configureStore
+ *
+ * @copyright (c) Ampersand Commerce 2018
+ */
+
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { reducers } from '../reducers/reducers';
+import rootReducer from '../reducers/rootReducer';
+
 
 var composeEnhancers =
         // eslint-disable-next-line no-underscore-dangle
@@ -8,7 +15,7 @@ var composeEnhancers =
 
 const configureStore = () => {
     return createStore(
-        reducers,
+        rootReducer,
         composeEnhancers(applyMiddleware(thunk))
     );
 }

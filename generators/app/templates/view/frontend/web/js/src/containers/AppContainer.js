@@ -1,3 +1,12 @@
+/**
+ * AppContainer
+ *
+ * Combines actions and state into application properties,
+ * to be accessed just through the regular React props tree;
+ * e.g. using `props.property` or `this.props.property`.
+ *
+ * @copyright (c) Ampersand Commerce 2018
+ */
 
 import React from 'react';
 import { connect } from 'react-redux';
